@@ -4,6 +4,8 @@
 <button class="btn btn-primary"  (click)="getLocation()">Get location</button>
     </div>
     <div>
-        {{locationModel}}
+        <li *ngFor="let item of locationModel">
+        {{item.city}}
+        </li>
     </div>
 </div>

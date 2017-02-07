@@ -25,12 +25,11 @@ export class GeothermalHeatingComponent implements OnInit
 
   }
 
-  getLocation(): Promise<LocationModel[]>
+  getLocation()
   {
-    return this.webApi.getAllCities().then(resp => 
+    this.webApi.getAllCities().then(resp => 
     {
-      return resp;
-    });
+      this.locationModel = resp;
+   });
   }
-
 }
