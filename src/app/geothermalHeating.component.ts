@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 
+import { LocationModel, WebApiService } from './services/index';
+
 @Component({
   selector: 'geothermalHeating.component',
   templateUrl: './geothermalHeating.component.html',
@@ -10,17 +12,25 @@ import { OnInit } from '@angular/core';
 
 export class GeothermalHeatingComponent implements OnInit
 {
-
   title = 'GeothermalHeatingComponent';
 
-  constructor()
+  locationModel: LocationModel[];
+
+  constructor(private webApi: WebApiService)
   {
   }
 
   ngOnInit(): void
   {
-    
+
   }
 
-  
+  getLocation(): Promise<LocationModel[]>
+  {
+    return this.webApi.getAllCities().then(resp => 
+    {
+      return resp;
+    });
+  }
+
 }

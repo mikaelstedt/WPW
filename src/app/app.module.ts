@@ -10,6 +10,8 @@ import { GeothermalHeatingComponent } from './geothermalHeating.component';
 import { NavigationComponent } from './shared';
 import { HomeComponent } from './home/home.component'
 
+import { WebApiService } from './services/index';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,7 @@ import { HomeComponent } from './home/home.component'
     AlertModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [WebApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
