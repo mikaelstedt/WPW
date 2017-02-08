@@ -8,4 +8,9 @@
         {{item.city}}
         </li>
     </div>
+    <div>
+        <select>
+            <option *ngFor="let item of locationModel" value= {{item.city}}>{{item.city}}</option>
+</select>
+    </div>
 </div>
