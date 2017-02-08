@@ -16,6 +16,8 @@ export class GeothermalHeatingComponent implements OnInit
 
   locationModel: LocationModel[];
 
+  selectedCity: string;
+
   constructor(private webApi: WebApiService)
   {
   }

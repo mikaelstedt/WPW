@@ -9,8 +9,9 @@
         </li>
     </div>
     <div>
-        <select>
+        <select [(ngModel)]="selectedCity">
             <option *ngFor="let item of locationModel" value= {{item.city}}>{{item.city}}</option>
-</select>
+        </select>
+        {{selectedCity}}
     </div>
 </div>
